@@ -1,87 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mencha GC LLC - Servicios / Services</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-    background: #e7ecf0;
-    color: #333;
-  }
-  header {
-    background: #004080;
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-  }
-  header button {
-    background: #0073e6;
-    border: none;
-    color: white;
-    padding: 8px 14px;
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: 600;
-  }
-  .services-section {
-    max-width: 960px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background: #f9fbfd;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  .services-section h2 {
-    text-align: center;
-    color: #003366;
-    margin-bottom: 35px;
-    font-weight: 700;
-    font-size: 2.4rem;
-  }
-  .service-item {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 30px;
-    background: white;
-    border-radius: 10px;
-    padding: 18px;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.07);
-  }
-  .service-item img {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  }
-  .service-info h3 {
-    margin: 0 0 10px;
-    color: #004080;
-    font-size: 1.5rem;
-  }
-  .service-info p {
-    margin: 0;
-    color: #555;
-    line-height: 1.5;
-    font-size: 1.05rem;
-  }
-  @media(max-width: 768px) {
-    .service-item {
-      flex-direction: column;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mencha GC LLC - Servicios</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      background: linear-gradient(to bottom, #012040, #003366, #004080);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #001a33;
+      color: white;
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header button {
+      background: #0073e6;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      margin: 10px 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    header button:hover {
+      background: #005bb5;
+    }
+
+    .services-section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .services-section h2 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 35px;
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 30px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 1px 10px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.01);
+    }
+
     .service-item img {
-      width: 100%;
-      height: auto;
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
-  }
-</style>
+
+    .service-info h3 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+
+    .service-info p {
+      margin: 0;
+      color: #e0e0e0;
+      line-height: 1.5;
+      font-size: 1.05rem;
+    }
+
+    @media(max-width: 768px) {
+      .service-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .service-item img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -96,17 +125,47 @@
   <h2 data-lang="en" style="display:none;">Services</h2>
 
   <div class="service-item">
-    <img src="images/painting.jpg" alt="Painting Service" />
+    <img src="images/plumbing.jpg" alt="Plomería" />
     <div class="service-info">
-      <h3 data-lang="es">Pintura</h3>
-      <h3 data-lang="en" style="display:none;">Painting</h3>
-      <p data-lang="es">Ofrecemos pintura profesional para interiores y exteriores, con acabados de alta calidad.</p>
-      <p data-lang="en" style="display:none;">We offer professional painting for interiors and exteriors with high-quality finishes.</p>
+      <h3 data-lang="es">Plomería</h3>
+      <h3 data-lang="en" style="display:none;">Plumbing</h3>
+      <p data-lang="es">Instalación, reparación y mantenimiento de sistemas de agua y desagüe.</p>
+      <p data-lang="en" style="display:none;">Installation, repair, and maintenance of water and drainage systems.</p>
     </div>
   </div>
 
   <div class="service-item">
-    <img src="images/roofing.jpg" alt="Roofing Service" />
+    <img src="images/heating.jpg" alt="Calefacción" />
+    <div class="service-info">
+      <h3 data-lang="es">Calefacción</h3>
+      <h3 data-lang="en" style="display:none;">Heating</h3>
+      <p data-lang="es">Soluciones de calefacción eficientes y mantenimiento profesional.</p>
+      <p data-lang="en" style="display:none;">Efficient heating solutions and professional maintenance.</p>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="images/electric.jpg" alt="Electricidad" />
+    <div class="service-info">
+      <h3 data-lang="es">Electricidad</h3>
+      <h3 data-lang="en" style="display:none;">Electricity</h3>
+      <p data-lang="es">Servicios eléctricos seguros para hogares y negocios.</p>
+      <p data-lang="en" style="display:none;">Safe electrical services for homes and businesses.</p>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="images/painting.jpg" alt="Pintura" />
+    <div class="service-info">
+      <h3 data-lang="es">Pintura</h3>
+      <h3 data-lang="en" style="display:none;">Painting</h3>
+      <p data-lang="es">Pintura profesional para interiores y exteriores, con acabados de alta calidad.</p>
+      <p data-lang="en" style="display:none;">Professional painting for interiors and exteriors with high-quality finishes.</p>
+    </div>
+  </div>
+
+  <div class="service-item">
+    <img src="images/roofing.jpg" alt="Techos" />
     <div class="service-info">
       <h3 data-lang="es">Techos</h3>
       <h3 data-lang="en" style="display:none;">Roofing</h3>
@@ -116,47 +175,17 @@
   </div>
 
   <div class="service-item">
-    <img src="images/flooring.jpg" alt="Flooring Service" />
+    <img src="images/flooring.jpg" alt="Pisos" />
     <div class="service-info">
       <h3 data-lang="es">Pisos</h3>
       <h3 data-lang="en" style="display:none;">Flooring</h3>
-      <p data-lang="es">Colocación de pisos de madera, cerámica y más, adaptados a tus necesidades.</p>
+      <p data-lang="es">Instalación de pisos de madera, cerámica y más, adaptados a tus necesidades.</p>
       <p data-lang="en" style="display:none;">Installation of wood, ceramic floors, and more tailored to your needs.</p>
     </div>
   </div>
 
   <div class="service-item">
-    <img src="images/plumbing.jpg" alt="Plumbing Service"/> 
-    <div class="service-info">
-      <h3 data-lang="es">Plomeria</h3>
-      <h3 data-lang="en" style="display:none;">Plumbing</h3>
-      <p data-lang="es">Tienes una fuga o un drenaje tapado? Aqui estamos para ayudarte! Plomería rápida y confiable cuando la necesites.</p>
-      <p data-lang="en" style="display:none;">Got a leak or a clogged drain? We've got you covered! Quick, honest plumbing help whenever you need it.</p> 
-    </div>
-  </div>
-
-  <div class="service item">
-    <img src="images/heating.jpg" alt="Heating Service" />
-    <div class="service-info">
-      <h3 data-lang="es">Calefacción</h3>
-      <h3 data-lang="en" style="display:none;">Heating</h3>
-      <p data-lang="es">Hacemos reparaciones e instalaciones rápido para que estés calentito.</p>
-      <p data-lang="en" style="display:none;">We do repairs and Installations fast to keep you warm.</p>
-    </div>
-</div>
-
-  <div class="service item">
-    <img src="images/electrical.jpg" alt="Electrical Service" />
-    <div class="service-info">
-      <h3 data-lang="es">Electricidad</h3>
-      <h3 data-lang="en" style="display:none;">Electrical</h3>
-      <p data-lang="es">Reparaciones e instalaciones eléctricas profesionales- seguras, rápidas y confibles.</p>
-      <p data-lang="en" style="display:none;">Proffesional electrical repairs- safe, fast and reliable installations.</p>
-    </div>
-  </div>
-        
-  <div class="service-item">
-    <img src="images/construction.jpg" alt="Construction Service" />
+    <img src="images/construction.jpg" alt="Construcción" />
     <div class="service-info">
       <h3 data-lang="es">Construcción</h3>
       <h3 data-lang="en" style="display:none;">Construction</h3>
@@ -172,7 +201,6 @@
       el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
     });
   }
-  // Inicializa en español
   setLanguage('es');
 </script>
 
